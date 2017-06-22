@@ -40,6 +40,9 @@ export default {
 </script>
 
 <style>
+  html,body{
+    font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  }
   @import '../static/index.css';
   .navbar-inverse {
     background-color: #fff;
@@ -82,7 +85,7 @@ export default {
   .navbar-toggle{
     margin-top: 20px;
   }
-  
+
 .jumbotron {
   padding-top: 80px;
   padding-bottom: 80px;
