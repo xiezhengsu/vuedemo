@@ -10,7 +10,7 @@
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
-    
+
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
               <div class="item active">
@@ -44,9 +44,9 @@
           </div>
         </div>
       </div>
-        
+
     </div>
-    
+
     <div class="jumbotron masthead" style="display: none">
       <div class="container">
         <div class="row">
@@ -153,15 +153,15 @@
           <div class="row aboutus-list text-center">
             <div class="col-lg-4 col-sm-4 col-xs-12 animate-box" data-animate-effect="fadeInUp" style="margin-bottom: 10px;">
               <span class="aboutus-service"></span>
-              <p>咨询服务周到</p>
+              <p>人才与团队</p>
             </div>
             <div class="col-lg-4 col-sm-4 col-xs-12 animate-box" data-animate-effect="fadeInUp" style="margin-bottom: 10px;">
               <span class="aboutus-resources"></span>
-              <p>行业资源丰富</p>
+              <p>管理与机制</p>
             </div>
             <div class="col-lg-4 col-sm-4 col-xs-12 animate-box" data-animate-effect="fadeInUp" style="margin-bottom: 10px;">
               <span class="aboutus-technology"></span>
-              <p>融资技术专业</p>
+              <p>客户与维护</p>
             </div>
           </div>
         </div>
@@ -300,9 +300,9 @@
 <script type="text/ecmascript-6">
 export default {
   created () {
-    document.getElementById('carousel-example-partner').carousel({
-      interval: 3000
-    })
+//    document.getElementById('carousel-example-partner').carousel({
+//      interval: 3000
+//    })
   }
 }
 </script>

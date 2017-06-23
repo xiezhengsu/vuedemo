@@ -73,7 +73,7 @@
             <h4>分类</h4>
           </div>
         </div>
-        
+
         <div class="row row-cooperation-detail">
           <div class="col-lg-6 col-xs-6"><p>金融市场产品繁多，但都会有自身的产品优势和适用
             客户群体，我们致力于为每一个融资项目量身定制一整套金融类服务。</p></div>

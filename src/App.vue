@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="border-bottom: 3px solid #1F2D85">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -13,11 +13,11 @@
         </div>
         <div class="navbar-collapse collapse" role="navigation">
           <ul class="nav navbar-nav">
-            <li class="hidden-sm hidden-md"><router-link to="/home">首页</router-link></li>
-            <li><router-link to="/aboutus">关于我们</router-link></li>
-            <li><router-link to="/superiority">企业优势</router-link></li>
-            <li><router-link to="/news">新闻中心</router-link></li>
-            <li><router-link to="/contactus">联系我们</router-link></li>
+            <li><router-link to="/home" v-on:click.native="getClass('home')" :class="{styleClass:isHome}">首页</router-link></li>
+            <li><router-link to="/aboutus" v-on:click.native="getClass('aboutus')" :class="{styleClass:isAbout}">关于我们</router-link></li>
+            <li><router-link to="/superiority" v-on:click.native="getClass('superiority')" :class="{styleClass:isSuperiority}">企业优势</router-link></li>
+            <li><router-link to="/news" v-on:click.native="getClass('news')" :class="{styleClass:isNews}">新闻中心</router-link></li>
+            <li><router-link to="/contactus" v-on:click.native="getClass('contactus')" :class="{styleClass:isContactus}">联系我们</router-link></li>
           </ul>
         </div>
       </div>
@@ -78,8 +78,8 @@
           <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank" rel="nofollow">备案号：粤ICP备15071992号-1</a>
         </p>
       </div>
-  
-  
+
+
     </footer>
   </div>
 </template>
@@ -89,8 +89,53 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'hello bootstrap for vue'
+      msg: 'hello bootstrap for vue',
+      isHome: true,
+      isAbout: false,
+      isSuperiority: false,
+      isNews: false,
+      isContactus: false
     }
+  },
+  methods: {
+    getClass (str) {
+      if (str === 'home') {
+        this.isHome = true
+        this.isAbout = false
+        this.isSuperiority = false
+        this.isNews = false
+        this.isContactus = false
+      } else if (str === 'aboutus') {
+        this.isHome = false
+        this.isAbout = true
+        this.isSuperiority = false
+        this.isNews = false
+        this.isContactus = false
+      } else if (str === 'superiority') {
+        this.isHome = false
+        this.isAbout = false
+        this.isSuperiority = true
+        this.isNews = false
+        this.isContactus = false
+      } else if (str === 'news') {
+        this.isHome = false
+        this.isAbout = false
+        this.isSuperiority = false
+        this.isNews = true
+        this.isContactus = false
+      } else if (str === 'contactus') {
+        this.isHome = false
+        this.isAbout = false
+        this.isSuperiority = false
+        this.isNews = false
+        this.isContactus = true
+      }
+    }
+  },
+  mounted () {
+    var name = this.$route.path.replace('/', '')
+    console.log(name)
+    this.getClass(name)
   }
 }
 </script>
@@ -125,23 +170,21 @@ export default {
   }
 
   .navbar-inverse .navbar-nav>li>a {
-    color: #9F9FDA;
-  }
-  .navbar-nav>li>a {
     padding-top: 30px;
+    font-size: 18px;
+    color: #1F2D85;
+    font-weight: 600;
   }
-  inverse .navbar-nav>li>a:hover {
-    color: #9B9BFA;
-    background-color: transparent;
-  }
-  .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  .navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:active, .navbar-inverse .navbar-nav>li>a:hover {
     color: #9B9BFA;
     background-color: transparent;
   }
   .navbar-toggle{
     margin-top: 20px;
   }
-
+  .styleClass{
+    color: #9B9BFA !important;
+  }
 .jumbotron {
   padding-top: 80px;
   padding-bottom: 80px;
