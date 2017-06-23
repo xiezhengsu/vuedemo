@@ -8,9 +8,12 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../static/css/animate.css'
 import '../static/css/ysemm.css'
+import BaiduMap from 'vue-baidu-map'
 
 Vue.config.productionTip = false
-
+Vue.use(BaiduMap, {
+  ak: 'mkttoDbHl6tvZVzaW2bxi5pMwqfyDSKc'
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

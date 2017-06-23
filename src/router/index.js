@@ -6,6 +6,9 @@ Vue.use(Router)
 
 const home = r => require.ensure([], () => r(require('@/components/home/home')), 'home')
 const aboutus = r => require.ensure([], () => r(require('@/components/aboutus/aboutus')), 'aboutus')
+const news = r => require.ensure([], () => r(require('@/components/news/news')), 'news')
+const contactus = r => require.ensure([], () => r(require('@/components/contactus/contactus')), 'contactus')
+const superiority = r => require.ensure([], () => r(require('@/components/superiority/superiority')), 'superiority')
 
 export default new Router({
   routes: [
@@ -20,6 +23,18 @@ export default new Router({
     {
       path: '/aboutus',
       component: aboutus
+    },
+    {
+      path: '/news',
+      component: news
+    },
+    {
+      path: '/contactus',
+      component: contactus
+    },
+    {
+      path: '/superiority',
+      component: superiority
     }
   ]
 })
